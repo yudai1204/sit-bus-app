@@ -1,13 +1,9 @@
 /** @type {import('next').NextConfig} */
 
-const branchName = process.env.GITHUB_ACTIONS ? "/sit-bus-app.yudai04.dev" : "",
 
-const nextConfig = {
+module.exports = {
     output: 'export',
-    reactStrictMode: true,
+    basePath: process.env.GITHUB_ACTIONS ? "/sit-bus-app.yudai04.dev" : "",
     trailingSlash: true,
     assetPrefix: '/',
-    basePath: branchName,
 };
-
-module.exports = nextConfig;
