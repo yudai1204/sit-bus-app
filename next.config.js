@@ -9,4 +9,8 @@ const nextConfig = {
     basePath: branchName,
 };
 
-module.exports = nextConfig;
+module.exports = {
+    basePath: process.env.GITHUB_ACTIONS ? "/sit-bus-app.yudai04.dev" : "",
+    trailingSlash: true,
+    assetPrefix: '/',
+};
